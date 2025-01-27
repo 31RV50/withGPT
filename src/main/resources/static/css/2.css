@@ -1,0 +1,225 @@
+:root {
+    --primary-color: #007BFF;
+    --secondary-color: #0056b3;
+    --background-color: #f4f4f4;
+    --text-color: white;
+    --header-bg-color: #000;
+    --button-bg-color: #007BFF;
+    --button-hover-color: #0056b3;
+    --test-button-bg-color: #28a745;
+    --test-button-hover-color: #218838;
+    --header-height: 70px;
+    --header-font-size: 24px;
+    --button-font-size: 16px;
+    --button-padding: 10px 20px;
+    --header-padding: 10px 0;
+}
+
+body {
+    margin: 0;
+    padding-top: var(--header-height); /* Espacio adicional para el encabezado */
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: var(--header-padding);
+    font-size: var(--header-font-size);
+    font-weight: bold;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fixed-header h1 {
+    margin: 0;
+    padding-left: 10px;
+}
+
+.header-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+}
+.header-buttons button {
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    border: none;
+    padding: var(--button-padding);
+    font-size: var(--button-font-size);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.header-buttons button:hover {
+    background-color: var(--button-hover-color); /* Cambio aquí */
+    transform: scale(1.05);
+}
+
+.image-container {
+    position: relative;
+    width: 80%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+.dynamic-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#dynamicImage {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transform-origin: bottom; /* Punto de origen de la transformación */
+    transition: transform 0.3s ease-in-out, height 0.3s ease-in-out;
+    opacity: 0.8; /* 80% de opacidad */
+    height: 100%;
+}
+
+#staticImage {
+    width: 100%;
+    z-index: -1;
+}
+
+.controls {
+    margin: 20px 0;
+    text-align: center;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.progress-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#progress-bar {
+    width: 80%;
+    max-width: 1000px;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin: 10px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#progress-bar-fill {
+    height: 100%;
+    background-color: #007BFF;
+    width: 0%;
+    transition: width 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --header-height: 50px;
+        --header-font-size: 20px;
+        --button-font-size: 14px;
+        --button-padding: 8px 16px;
+        --header-padding: 8px 0;
+    }
+}
+
+/*@media (max-width: 768px) {
+    .fixed-header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .header-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .header-buttons button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    #dynamicImage {
+        width: 100%;
+    }
+}*/
+
+/* @media (max-width: 480px) {
+    .fixed-header {
+        font-size: 20px;
+    }
+
+    .header-buttons button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}   */
+
+@media (max-width: 480px) {
+    :root {
+        --header-height: 40px;
+        --header-font-size: 18px;
+        --button-font-size: 12px;
+        --button-padding: 6px 12px;
+        --header-padding: 6px 0;
+    }
+
+    .header-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+}
+
+.test-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.test-button {
+    background-color: var(--test-button-bg-color); /* Verde */
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.test-button:hover {
+    background-color: var(--test-button-hover-color); /* Verde oscuro */
+    transform: scale(1.05);
+}

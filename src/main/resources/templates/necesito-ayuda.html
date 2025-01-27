@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Dana Project</title>
+
+<!-- Enlace a Bootstrap local -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+ <!-- Enlace a la librería de Bootstrap JS -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka4tq5vHgzDbd5Euqk7RjpG5h58h5smknoJ4i7icwmFtM/qAZ0XfttZQhhqV+ZGV" crossorigin="anonymous"></script>
+
+
+<!-- Enlace a tu archivo CSS personalizado -->
+<link rel="stylesheet" href="css/styles.css">
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/ico.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <div class="container-fluid py-3">
+            <div class="row">
+                <!-- Logo -->
+                <div class="col-12 col-md-3">
+                    <a href="index.html"><img src="images/logo-dana-2.png" alt="Clean Dana Project" class="img-fluid"></a>
+					
+                </div>
+                <!-- Menú de navegación -->
+                <div class="col-12 col-md-9 d-flex justify-content-end align-items-center">
+                    <nav>
+                        <ul class="list-unstyled d-flex mb-0 custom-nav">
+							<li class="ms-3"><a href="index.html" class="text-decoration-none">Inicio</a></li>
+							<li class="ms-3"><a href="proyecto.html" class="text-decoration-none">Proyecto</a></li>
+							<li class="ms-3"><a href="donaciones.hmtl" class="text-decoration-none">Donaciones</a></li>
+							<li class="ms-3"><a href="colaborar.html" class="text-decoration-none">Colaborar</a></li>
+						</ul>						
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <h1>Formulario de Registro: Necesito Ayuda</h1>
+        
+        <form action="registro_necesito_ayuda.php" method="POST" class="formulario">
+            <div class="campo">
+                <label for="nombre_comercio">Nombre de tu Comercio:</label>
+                <input type="text" id="nombre_comercio" name="nombre_comercio" required placeholder="Ingresa el nombre de tu comercio">
+            </div>
+
+            <div class="campo">
+                <label for="tipo_ayuda">Tipo de Ayuda que Necesitas:</label>
+                <textarea id="tipo_ayuda" name="tipo_ayuda" required placeholder="Describe la ayuda que necesitas" rows="4"></textarea>
+            </div>
+
+            <div class="campo">
+                <label for="contacto">Correo Electrónico de Contacto:</label>
+                <input type="email" id="contacto" name="contacto" required placeholder="Ingresa tu correo electrónico">
+            </div>
+
+            <div class="campo">
+                <button type="submit">Enviar Solicitud de Ayuda</button>
+            </div>
+        </form>
+
+        <!-- Sección de Ingreso (para usuarios ya registrados) -->
+        <div class="seccion-ingreso">
+            <h2>Ya estoy registrado</h2>
+            <form action="login.php" method="POST" class="formulario">
+                <div class="campo">
+                    <label for="email_login">Correo Electrónico:</label>
+                    <input type="email" id="email_login" name="email_login" required placeholder="Ingresa tu correo electrónico">
+                </div>
+
+                <div class="campo">
+                    <label for="password_login">Contraseña:</label>
+                    <input type="password" id="password_login" name="password_login" required placeholder="Ingresa tu contraseña">
+                </div>
+
+                <div class="campo">
+                    <button type="submit">Ingresar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+</body>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Clean Dana Project 2025</p>
+    </footer>
+
+   </body>
+</html>

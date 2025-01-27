@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Dana Project</title>
+
+<!-- Enlace a Bootstrap local -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+ <!-- Enlace a la librería de Bootstrap JS -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka4tq5vHgzDbd5Euqk7RjpG5h58h5smknoJ4i7icwmFtM/qAZ0XfttZQhhqV+ZGV" crossorigin="anonymous"></script>
+
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Enlace a tu archivo CSS personalizado -->
+<link rel="stylesheet" href="css/styles.css">
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/ico.png" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <div class="container-fluid py-3">
+            <div class="row">
+                <!-- Logo -->
+                <div class="col-12 col-md-3">
+                    <a href="index.html"><img src="images/logo-dana-2.png" alt="Clean Dana Project" class="img-fluid"></a>
+					
+                </div>
+                <!-- Menú de navegación -->
+                <div class="col-12 col-md-9 d-flex justify-content-end align-items-center">
+                    <nav>
+                        <ul class="list-unstyled d-flex mb-0 custom-nav">
+							<li class="ms-3"><a href="index.html" class="negrita text-decoration-none">Inicio</a></li>
+							<li class="ms-3"><a href="proyecto.html" class=" negrita text-decoration-none">Proyecto</a></li>
+							<li class="ms-3"><a href="donaciones.html" class=" negrita text-decoration-none">Donaciones</a></li>
+							<li class="ms-3"><a href="colaborar.html" class=" negrita text-decoration-none">Colaborar</a></li>
+						</ul>						
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="app">
+        <div class="image-container">
+            <div class="dynamic-image-wrapper">
+                <img src="images/imagen-inundacion-sucio.png" alt="Fondo" id="dynamicImage">
+            </div>
+            <img src="images/imagen-inundacion.jpg" alt="Fondo Estático" id="staticImage">
+        </div>
+        <div class="controls">
+            <button id="buySinglePixel">Comprar Píxel (€1)</button>
+            <button id="buySquarePack">Comprar Pack 3x3 (€9)</button>
+            <button id="buyTetrisPack">Comprar Pack Tetris (€36)</button>
+            <button id="buySquarePack10x10">Comprar Pack 10x10 (€100)</button>
+        </div>
+        <section class="progress-section">
+            
+            <h3>Progreso: <span id="progress">0.00%</span></h3>
+            <div id="progress-bar">
+                <div id="progress-bar-fill"></div>
+            </div>
+        </section>
+    </main>
+    <script src="js/3.js"></script>
+</body>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Clean Dana Project 2025</p>
+    </footer>
+    
+</html>
